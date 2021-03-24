@@ -1,4 +1,5 @@
 import React, { useEffect, useState} from 'react';
+import Recipe from './Recipe';
 import './App.css';
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
     );
     const data = await response.json();
     setRecipes(data.hits);
+    console.log(data.hits);
   }
 
 
@@ -31,8 +33,18 @@ const App = () => {
         <input type="text" className="search-bar" />
         <button type="submit" className="search-button">Search</button>
       </form>
+      {recipes.map(recipe => (
+        // this is the props
+        <Recipe key={recipe.recipe.label}
+          title={recipe.recipe.label}
+          image={recipe.recipe.image}
+          calories={recipe.recipe.calories}
+        />
+      ))}
     </div>
   )
 }
 
 export default App;
+
+// note: things are taken from state and passed into props and then passed into the recipe component
