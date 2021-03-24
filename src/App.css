@@ -2,7 +2,8 @@
   min-height: 100vh;
   /* background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%); */
   /* background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%); */
-  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  /* background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%); */
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('./images/background.png');
 
 }
 .search-form {
@@ -17,10 +18,22 @@
   border: none;
   padding: 15px;
 }
+.search-bar:focus {
+  outline: none;
+}
 .search-button {
   background: #43e97b;
   border: none;
   padding: 15px 20px;
+  color: #000;
+  cursor: pointer;
+  transition: .5s;
+}
+.search-button:focus {
+  outline: none;
+}
+.search-button:hover {
+  background: #16b44b;
   color: #fff;
 }
 

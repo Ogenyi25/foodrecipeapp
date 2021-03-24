@@ -14,7 +14,7 @@ const App = () => {
   const [search, setSearch] = useState('');
 
   // this state permits submission after clicking the search button
-  const [query, setQuery] = useState('chicken');
+  const [query, setQuery] = useState('');
 
   // this function runs anytime the page re-renders
   useEffect(() => {
