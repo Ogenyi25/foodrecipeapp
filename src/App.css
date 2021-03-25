@@ -1,39 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 .App {
   min-height: 100vh;
-  /* background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%); */
-  /* background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%); */
-  /* background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%); */
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('./images/background.png');
+  font-family: 'Poppins', sans-serif;
+  
 
+}
+.landing {
+  min-height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('./images/background.png');
+  justify-content: center;
+  align-items: center;
+}
+.landing .logo {
+  font-size: 20px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+.landing .logo span {
+  color: #E79400;
+  font-weight: 700;
+}
+.landing .greet {
+  font-family: Great Vibes, sans-serif;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  color: #E79400;
+  padding-top: 150px;
+}
+.landing .title {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.landing .description {
+  color: #E79400;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
 }
 .search-form {
   min-height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .search-bar {
   width: 50%;
   border: none;
   padding: 15px;
+  font-size: 18px;
 }
 .search-bar:focus {
   outline: none;
 }
+.search-bar::placeholder {
+  font-size: 18px;
+  padding: 5px;
+  color: #474747;
+}
 .search-button {
-  background: #43e97b;
+  background: #E79400;
   border: none;
   padding: 15px 20px;
   color: #000;
   cursor: pointer;
   transition: .5s;
+  font-size: 18px;
 }
 .search-button:focus {
   outline: none;
 }
 .search-button:hover {
-  background: #16b44b;
+  background: #a56901;
   color: #fff;
 }
 
@@ -41,4 +88,93 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .landing {
+    min-height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('./images/background.png');
+    justify-content: center;
+    align-items: center;
+  }
+  .landing .logo {
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+  }
+  .landing .logo span {
+    color: #E79400;
+    font-weight: 700;
+  }
+  .landing .greet {
+    font-family: Great Vibes, sans-serif;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    color: #E79400;
+    padding-top: 150px;
+  }
+  .landing .title {
+    text-align: center;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 500;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .landing .description {
+    color: #E79400;
+    font-size: 23px;
+    font-weight: 600;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .search-form {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .search-bar {
+    width: 70%;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+  }
+  .search-bar:focus {
+    outline: none;
+  }
+  .search-bar::placeholder {
+    font-size: 18px;
+    padding: 5px;
+    color: #474747;
+  }
+  .search-button {
+    background: #E79400;
+    border: none;
+    padding: 15px 20px;
+    color: #000;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 18px;
+  }
+  .search-button:focus {
+    outline: none;
+  }
+  .search-button:hover {
+    background: #a56901;
+    color: #fff;
+  }
+  
+  .recipes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }

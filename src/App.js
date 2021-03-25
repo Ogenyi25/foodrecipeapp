@@ -47,10 +47,16 @@ const App = () => {
 
   return (
     <div className="App">
+      <div className="landing">
+        <div className="logo">Meal<span>Recipe</span></div>
+        <div className="greet">Welcome!</div>
+        <div className="title">Tired of having to cook thesame meal over and over again?</div>
+        <div className="description">Search and get Recipe to over 1000+ meals</div>
       <form onSubmit={getSearch} className="search-form">
-        <input type="text" className="search-bar" value={search} onChange={updateSearch} />
+        <input type="text" className="search-bar" value={search} onChange={updateSearch} placeholder="Enter search name" />
         <button type="submit" className="search-button">Search</button>
       </form>
+      </div>
       <div className="recipes-section">
         <div className="recipes">
           {recipes.map(recipe => (
